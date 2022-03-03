@@ -1,0 +1,11 @@
+<!--<select [(ngModel)]="picker" #txtPicker>-->
+<!--  <option value="" disabled selected>Choose</option>-->
+<!--  <option  value="{{color}}" *ngFor="let color of colors">{{color}}</option>-->
+<!--</select>-->
+
+color: <input type="color" [(ngModel)]="picker" #txtPicker>
+<div>
+  <div class="words" [ngStyle]="{background: txtPicker.value}"></div>
+</div>
+
+

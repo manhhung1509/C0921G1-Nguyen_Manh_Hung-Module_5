@@ -1,0 +1,15 @@
+<input type="number" [(ngModel)]="firstNumber">
+<input type="number" [(ngModel)]="secondNumber" >
+
+<select [(ngModel)]="ope">
+  <option value="" disabled selected>choose</option>
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<button (click)="getCaculate()"> = </button>
+<p>result: {{result}}</p>
+
+
+
