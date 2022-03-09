@@ -1,0 +1,89 @@
+<div class="container">
+  <form [formGroup]="registerForm">
+    <div class="mb-3">
+
+      <label class="form-label">email</label>
+      <input type="text" class="form-control" id="exampleInputPassword" formControlName="email">
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('email').hasError('required')
+                                      && registerForm.get('email').dirty">Email must not empty!
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('email').hasError('email')
+                                      && registerForm.get('email').dirty">Email is not valid!
+    </div>
+
+    <div formGroupName="groupPassword">
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="passWord">
+      </div>
+      <div class="mb-3 text-danger" *ngIf="registerForm.get('groupPassword').get('passWord').hasError('required')
+                                      && registerForm.get('groupPassword').get('passWord').dirty">Please input password!
+      </div>
+      <div class="mb-3 text-danger" *ngIf="registerForm.get('groupPassword').get('passWord').hasError('minlength')
+                                      && registerForm.get('groupPassword').get('passWord').dirty">Password must be have
+        more than 6 character!
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword2 " formControlName="confirmPassWord">
+      </div>
+      <div class="mb-3 text-danger" *ngIf="registerForm.get('groupPassword').get('confirmPassWord').hasError('required')
+                                      && registerForm.get('groupPassword').get('confirmPassWord').dirty">Please input
+        confirm password!
+      </div>
+      <div class="mb-3 text-danger" *ngIf="registerForm.hasError('checkPass',['groupPassword'])
+                                     && registerForm.get('groupPassword').get('confirmPassWord').dirty">Confirm password
+        is not match password!
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Phone</label>
+      <input type="text" class="form-control" id="exampleInputPassword3" formControlName="phone">
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('phone').hasError('required')
+                                      && registerForm.get('phone').dirty">Phone number must not empty!
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('phone').hasError('pattern')
+                                      && registerForm.get('phone').dirty">Phone number must be start with +84, follow
+      9or 10 numbers!
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Gender:</label>
+        <label><input type="radio" value="male" formControlName="gender"> Male</label>
+        <label><input type="radio" value="female" formControlName="gender"> Female</label>
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('gender').hasError('required')
+                                      && registerForm.get('gender').pristine">Gender must not empty!
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Age</label>
+      <input type="text" class="form-control" id="exampleInputPassword5" formControlName="age">
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('age').hasError('required')
+                                     && registerForm.get('age').dirty"> Age must not empty!
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('age').hasError('not18')
+                                         && registerForm.get('age').dirty">Age must be big more than 18 ages!
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Country</label>
+      <select class="select-option-custom">
+        <option value="" disabled selected>choose</option>
+        <option *ngFor="let country of countryList" value="{{country}}">{{country}}</option>
+      </select>
+    </div>
+    <div class="mb-3 text-danger" *ngIf="registerForm.get('country').hasError('required')
+                                      && registerForm.get('country').pristine">Country must not empty!
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="getInfoRegisterForm()">Submit</button>
+  </form>
+
+</div>
+

@@ -1,0 +1,25 @@
+.modal-title{
+  color:red;
+}
+.text-modal-body{
+  font-weight: bold;
+}
+.text-modal-body-head{
+  color: #e93b08;
+}
+
+.modal-header{
+  background: #e9b76d;
+}
+
+.modal-body{
+  background: #ffebbf;
+}
+
+.modal-footer{
+  background: #ffebbf;
+}
+
+#exampleModalLabel{
+  color: green;
+}

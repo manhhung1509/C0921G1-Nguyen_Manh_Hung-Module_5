@@ -1,0 +1,107 @@
+<div class="breadcrumb-section breadcrumb-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="breadcrumb-text">
+          <p>Class And Luxury</p>
+          <h1>Customer List</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ftco-section" style="margin-top: 70px; margin-bottom: 50px">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-wrap">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>Customer Name</th>
+              <th>Birthday</th>
+              <th>Gender</th>
+              <th>Id Card</th>
+              <th>Phone Number</th>
+              <th>Customer type</th>
+              <th>Address</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let customerObj of customerList, index as i">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{customerObj.customerName}}</td>
+              <td>{{customerObj.customerBirthday}}</td>
+              <td *ngIf="customerObj.customerGender == '1'">Male</td>
+              <td *ngIf="customerObj.customerGender == '0'">Female</td>
+              <td>{{customerObj.customerIdCard}}</td>
+              <td>{{customerObj.customerPhone}}</td>
+              <td>{{customerObj.customerType.customerTypeName}}</td>
+              <td>{{customerObj.address}}</td>
+              <td>
+                <a href="#" class="btn btn-warning">Edit</a>
+                <button (click)="showModalDelete(customerObj, i)"
+                        type="button" class="btn btn-danger" id="btnModalDelete" data-toggle="modal"
+                        data-target="#exampleModal">Delete
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete customer</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="text-modal-body-head">Are you sure to delete Customer:</h5>
+            <div><span class="text-modal-body">Id: </span>{{customer.id}}</div>
+            <div><span class="text-modal-body">Customer name: </span>{{customer.customerName}}</div>
+            <div *ngIf="customer.customerGender =='1'"><span class="text-modal-body">Gender: </span>Male</div>
+            <div *ngIf="customer.customerGender =='0'"><span class="text-modal-body">Gender: </span>Female</div>
+            <div><span class="text-modal-body">Phone number: </span>{{customer.customerPhone}}</div>
+            <div><span class="text-modal-body">Address: </span>{{customer.address}}</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class=" btn btn-success" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">Cancel</span>
+            </button>
+            <button (click)="deleteCustomer(index)" type="button" class=" btn btn-danger" data-dismiss="modal"
+                    aria-label="Close">
+              <span aria-hidden="true">Delete</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+

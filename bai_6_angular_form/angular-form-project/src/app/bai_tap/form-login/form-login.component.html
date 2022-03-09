@@ -1,0 +1,27 @@
+<div class="container">
+  <form [formGroup]="login">
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="text" class="form-control"  formControlName="email">
+    </div>
+    <div class="mb-3 text-danger" *ngIf="login.get('email').hasError('required')
+                                      && login.get('email').dirty">Email must not empty!
+    </div>
+    <div class="mb-3 text-danger" *ngIf="login.get('email').hasError('email')
+                                      && login.get('email').dirty">Email is not valid!
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Pass Word</label>
+      <input type="password" class="form-control"  formControlName="passWord">
+    </div>
+    <div class="mb-3 text-danger" *ngIf="login.get('passWord').hasError('required')
+                                      && login.get('passWord').dirty">Password must not empty!
+    </div>
+    <div class="mb-3 text-danger" *ngIf="login.get('passWord').hasError('minlength')
+                                      && login.get('passWord').dirty">Password must have big more than 6 character!
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+
+</div>

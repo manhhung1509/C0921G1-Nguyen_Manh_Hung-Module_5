@@ -1,0 +1,94 @@
+<div class="breadcrumb-section breadcrumb-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="breadcrumb-text">
+          <p>Class And Luxury</p>
+          <h1>Service List</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ftco-section" style="margin-top: 70px; margin-bottom: 50px">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-wrap">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>Service Id</th>
+              <th>Service Name</th>
+              <th>Service Area</th>
+              <th>Max People</th>
+              <th>Convenient</th>
+              <th>Pool Area</th>
+              <th>Floors</th>
+              <th>Rent Type</th>
+              <th>Service Type</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let service of serviceList, index as i">
+              <th scope="row">{{i+1}}</th>
+              <td>{{service.id}}</td>
+              <td>{{service.serviceName}}</td>
+              <td>{{service.serviceArea}}</td>
+              <td>{{service.maximumPeople}}</td>
+              <td>{{service.descriptionConvenient}}</td>
+              <td>{{service.poolArea}}</td>
+              <td>{{service.numberOfFloor}}</td>
+              <td>{{service.rentType.rentTypeName}}</td>
+              <td>{{service.serviceType.serviceTypeName}}</td>
+              <td>
+                <a href="#" class="btn btn-warning">Edit</a>
+                <button type="button" class="btn btn-danger" id="btnModalDelete" data-toggle="modal" data-target="#exampleModal">Delete</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--                ...-->
+          </div>
+          <div class="modal-footer">
+            <!--           ...-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+

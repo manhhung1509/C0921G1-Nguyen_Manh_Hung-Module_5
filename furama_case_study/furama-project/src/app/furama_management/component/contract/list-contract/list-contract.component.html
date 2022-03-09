@@ -1,0 +1,64 @@
+<div class="breadcrumb-section breadcrumb-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <div class="breadcrumb-text">
+          <p>Class And Luxury</p>
+          <h1>Contract List</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="ftco-section" style="margin-top: 70px; margin-bottom: 50px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-wrap">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>Contract Code</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Deposit</th>
+              <th>Customer Name</th>
+              <th>Service Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let contract of contractList, index as i">
+              <th scope="row">{{i +1}}</th>
+              <td>{{contract.contractCode}}</td>
+              <td>{{contract.contractStartDate}}</td>
+              <td>{{contract.contractEndDate}}</td>
+              <td>{{contract.deposit}}</td>
+              <td>{{contract.customer.customerName}}</td>
+              <td>{{contract.service.serviceName}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-end">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+

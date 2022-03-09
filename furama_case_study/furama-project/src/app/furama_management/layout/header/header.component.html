@@ -1,0 +1,73 @@
+<!--PreLoader circle-->
+<div class="loader">
+  <div class="loader-inner">
+    <div class="circle"></div>
+  </div>
+</div>
+<!--PreLoader Ends-->
+
+<!-- header -->
+<div class="top-header-area" id="sticker">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 text-center">
+        <div class="main-menu-wrap">
+          <!-- logo -->
+          <div class="site-logo">
+            <a [routerLink] ="['/home']">
+              <div><h1 style="color: #F28123">Furama</h1></div>
+            </a>
+          </div>
+          <!-- logo -->
+
+          <!-- menu start -->
+          <nav class="main-menu">
+            <ul>
+              <li class="current-list-item"><a [routerLink] ="['/home']">Home</a></li>
+              <li><a [routerLink] ="['/services']">Service</a>
+                <ul class="sub-menu">
+                  <li><a [routerLink] ="['/services']">Service List</a></li>
+                  <li><a [routerLink] ="['/create-service']">Create Service</a></li>
+                  <li><a [routerLink] ="['service/edit/:id']">Update Service</a></li>
+                </ul>
+              </li>
+              <li><a [routerLink] ="['/customers']">Customer</a>
+                <ul class="sub-menu">
+                  <li><a [routerLink] ="['/customers']">Customer List</a></li>
+                  <li><a [routerLink] ="['/create-customer']">Create Customer</a></li>
+                  <li><a [routerLink] ="['customer/edit/:id']">Update Customer</a></li>
+                </ul>
+              </li>
+              <li><a [routerLink] ="['/contracts']">Contract</a>
+                <ul class="sub-menu">
+                  <li><a [routerLink] ="['/contracts']">Contract List</a></li>
+                  <li><a [routerLink] ="['/create-contract']">Create Contract</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="shop.html">Booking</a>
+                <ul class="sub-menu">
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="checkout.html">Check Out</a></li>
+                  <li><a href="single-product.html">Single Product</a></li>
+                  <li><a href="cart.html">Cart</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="header-icons">
+                  <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                  <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                </div>`
+              </li>
+            </ul>
+          </nav>
+          <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+          <div class="mobile-menu"></div>
+          <!-- menu end -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end header -->
+

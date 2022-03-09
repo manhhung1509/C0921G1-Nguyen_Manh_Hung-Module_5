@@ -1,0 +1,23 @@
+<span>Get product list: </span><button type="button" class="btn btn-primary"
+                                (click)="getProductService(); flag=!flag">submit</button>
+
+<table class="table" [hidden]="!flag">
+  <thead>
+  <tr>
+    <th scope="col">stt</th>
+    <th scope="col">id</th>
+    <th scope="col">Product name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Manufacture</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of productList; index as i">
+    <th scope="row">{{i+1}}</th>
+    <th>{{product.id}}</th>
+    <td>{{product.productName}}</td>
+    <td>{{product.price}}</td>
+    <td>@{{product.manufacture}}</td>
+  </tr>
+  </tbody>
+</table>

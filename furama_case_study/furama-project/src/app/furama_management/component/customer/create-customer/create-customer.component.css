@@ -1,0 +1,12 @@
+.select-option-custom{
+  border: 1px solid #ddd;
+  padding: 19px;
+  width: 100%;
+  border-radius: 3px;
+  color: #70706f;
+}
+
+.birthDay-custom{
+  padding: 14px;
+  color: #70706f;
+}
