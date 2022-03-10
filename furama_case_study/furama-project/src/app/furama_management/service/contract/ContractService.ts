@@ -14,7 +14,7 @@ export class ContractService {
         contractEndDate: '2020-10-15',
         deposit: 1000,
         customer: {
-          id: 1, customerName: 'Nguyễn Văn Nghĩa', customerBirthday: '2000-12-09', customerGender: '1',
+          id: 'Kh-0001', customerName: 'Nguyễn Văn Nghĩa', customerBirthday: '2000-12-09', customerGender: '1',
           customerIdCard: '090879687965', customerPhone: '0910980982', customerEmail: 'nghia123@gmail.com',
           customerType: {customerTypeId: 1, customerTypeName: 'Diamond'}, address: 'Thanh Hóa'
         },

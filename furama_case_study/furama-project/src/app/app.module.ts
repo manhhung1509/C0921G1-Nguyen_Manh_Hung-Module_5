@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { UpdateServiceComponent } from './furama_management/component/service/up
 import { ListContractComponent } from './furama_management/component/contract/list-contract/list-contract.component';
 import { CreateContractComponent } from './furama_management/component/contract/create-contract/create-contract.component';
 import { NotFoundComponent } from './furama_management/layout/not-found/not-found.component';
+import {CustomerService} from './furama_management/service/customer/CustomerService';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,15 @@ import { NotFoundComponent } from './furama_management/layout/not-found/not-foun
     CreateContractComponent,
     NotFoundComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
+  providers: [
+    CustomerService
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

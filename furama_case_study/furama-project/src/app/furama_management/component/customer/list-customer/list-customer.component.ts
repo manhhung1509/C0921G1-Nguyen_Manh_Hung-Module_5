@@ -24,7 +24,7 @@ export class ListCustomerComponent implements OnInit {
       customerName: string;
       customerPhone: string;
       customerType: CustomerType;
-      id: number;
+      id: string;
     }
 
   }
