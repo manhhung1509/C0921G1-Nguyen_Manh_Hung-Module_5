@@ -31,6 +31,7 @@ export class ListCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerList = this.customerService.getCustomerList();
+
   }
 
   public showModalDelete(customerHtml : Customer, index: number): void{

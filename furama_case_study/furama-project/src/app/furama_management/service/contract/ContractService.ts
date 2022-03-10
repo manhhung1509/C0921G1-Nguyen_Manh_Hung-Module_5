@@ -19,6 +19,7 @@ export class ContractService {
           customerType: {customerTypeId: 1, customerTypeName: 'Diamond'}, address: 'Thanh Hóa'
         },
         service: {
+          id: 1,
           serviceName: 'Villa 1',
           serviceArea: 100,
           maximumPeople: 3,

@@ -11,7 +11,7 @@ export class CustomerService {
 
     this.customers = [
       {
-        id:1,
+        id:'KH-0001',
         customerName: 'Nguyễn Văn Nghĩa',
         customerBirthday: '2000-12-09',
         customerGender: '1',
@@ -22,7 +22,7 @@ export class CustomerService {
         address: 'Thanh Hóa'
       },
       {
-        id:2,
+        id:'KH-0002',
         customerName: 'Nguyễn thị Hoa',
         customerBirthday: '1997-09-19',
         customerGender: '0',
@@ -33,7 +33,7 @@ export class CustomerService {
         address: 'Quảng Bình'
       },
       {
-        id:3,
+        id:'KH-0003',
         customerName: 'Nguyễn Thị Hoài',
         customerBirthday: '1998-03-03',
         customerGender: '0',
@@ -44,7 +44,7 @@ export class CustomerService {
         address: 'Huế'
       },
       {
-        id:4,
+        id:'KH-0004',
         customerName: 'Nguyễn Văn Hậu',
         customerBirthday: '1992-11-18',
         customerGender: '1',

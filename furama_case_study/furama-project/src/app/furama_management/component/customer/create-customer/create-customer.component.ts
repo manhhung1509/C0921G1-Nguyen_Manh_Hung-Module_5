@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
+import {CustomerService} from '../../../service/customer/CustomerService';
 
 @Component({
   selector: 'app-create-customer',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-customer.component.css']
 })
 export class CreateCustomerComponent implements OnInit {
+  customerDto: FormGroup
 
-  constructor() { }
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
+    this.customerDto = new FormGroup({
+      id: new FormControl('', )
+    });
   }
 
 }
