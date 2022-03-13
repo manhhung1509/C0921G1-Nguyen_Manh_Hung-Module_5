@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bai-bay-project"
+    }
+  },
+  "defaultProject": "bai-bay-project",
+  "cli": {
+    "analytics": "498f9ab3-53a2-4a40-86d0-bad747142d4b"
+  }
 }

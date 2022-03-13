@@ -16,6 +16,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="table-wrap">
+          <div style="color: green">{{message}}</div>
           <table class="table table-striped">
             <thead>
             <tr>
@@ -33,20 +34,21 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let service of serviceList, index as i">
-              <th scope="row">{{i+1}}</th>
-              <td>{{service.id}}</td>
-              <td>{{service.serviceName}}</td>
-              <td>{{service.serviceArea}}</td>
-              <td>{{service.maximumPeople}}</td>
-              <td>{{service.descriptionConvenient}}</td>
-              <td>{{service.poolArea}}</td>
-              <td>{{service.numberOfFloor}}</td>
-              <td>{{service.rentType.rentTypeName}}</td>
-              <td>{{service.serviceType.serviceTypeName}}</td>
+            <tr *ngFor="let serviceObj of serviceList| paginate: { itemsPerPage: 5, currentPage: p }, index as i">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{serviceObj.id}}</td>
+              <td>{{serviceObj.serviceName}}</td>
+              <td>{{serviceObj.serviceArea}}</td>
+              <td>{{serviceObj.maximumPeople}}</td>
+              <td>{{serviceObj.descriptionConvenient}}</td>
+              <td>{{serviceObj.poolArea}}</td>
+              <td>{{serviceObj.numberOfFloor}}</td>
+              <td>{{serviceObj.rentType.rentTypeName}}</td>
+              <td>{{serviceObj.serviceType.serviceTypeName}}</td>
               <td>
-                <a href="#" class="btn btn-warning">Edit</a>
-                <button type="button" class="btn btn-danger" id="btnModalDelete" data-toggle="modal" data-target="#exampleModal">Delete</button>
+                <a [routerLink]="['/service/edit/'+serviceObj.id]" class="btn btn-warning">Edit</a>
+                <a (click)="shoModal(serviceObj.id)" class="btn btn-danger"
+                   id="btnModalDelete" data-toggle="modal" data-target="#exampleModal">Delete</a>
               </td>
             </tr>
             </tbody>
@@ -56,15 +58,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-end">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
-        </nav>
+        <pagination-controls (pageChange)="p = $event" class="float-md-right"></pagination-controls>
       </div>
     </div>
 
@@ -80,10 +74,19 @@
             </button>
           </div>
           <div class="modal-body">
-            <!--                ...-->
+            <h5 class="text-modal-body-head">Are you sure to delete service:</h5>
+            <div><span class="text-modal-body">Id: </span>{{service.id}}</div>
+            <div><span class="text-modal-body">Service name: </span>{{service.serviceName}}</div>
+            <div><span class="text-modal-body">Area: </span>{{service.serviceArea}}</div>
           </div>
           <div class="modal-footer">
-            <!--           ...-->
+            <button type="button" class=" btn btn-success" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">Cancel</span>
+            </button>
+            <button (click)="deleteService(service.id)" type="button" class=" btn btn-danger" data-dismiss="modal"
+                    aria-label="Close">
+              <span aria-hidden="true">Delete</span>
+            </button>
           </div>
         </div>
       </div>

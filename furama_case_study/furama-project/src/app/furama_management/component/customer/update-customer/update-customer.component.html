@@ -22,7 +22,8 @@
             <div class="card single-accordion">
               <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                          aria-expanded="true" aria-controls="collapseOne">
                     Create
                   </button>
                 </h5>
@@ -31,31 +32,98 @@
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                   <div class="billing-address-form">
-                    <form action="#">
-                      <p><input type="text" placeholder="Customer Name"></p>
-                      <p><input class="birthDay-custom" type="date" placeholder="Birthday"></p>
+                    <form [formGroup]="customerDto" (ngSubmit)="updateCustomer()">
+
+                      <p><input type="text" placeholder="Customer code" formControlName="id" value="{{customer.id}}">
+                      </p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('id').hasError('required') && customerDto.get('id').dirty && submitted">
+                        Customer Id must not blank.
+                      </p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('id').hasError('pattern')&& customerDto.get('id').dirty && submitted">
+                        Customer id must match format: KH-XXXX (X is a number from 0 to 9).
+                      </p>
+
+                      <p><input type="text" placeholder="Customer Name" formControlName="customerName"
+                                value="{{customer.customerName}}"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerName').hasError('required')&& customerDto.get('customerName').dirty && submitted">
+                        Customer Name must not blank.
+                      </p>
+
+                      <p><input class="birthDay-custom" type="date" placeholder="Birthday"
+                                formControlName="customerBirthday" value="{{customer.customerBirthday}}"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerBirthday').hasError('required')&& customerDto.get('customerBirthday').dirty  && submitted">
+                        Please select birthday.
+                      </p>
+
                       <p>
-                        <select class="select-option-custom">
-                          <option selected>Gender</option>
-                          <option value="1">Male</option>
-                          <option value="2">Female</option>
+                        <select class="select-option-custom" formControlName="customerGender"
+                                value="{{customer.customerGender}}">
+                          <option value="" selected disabled>Gender</option>
+                          <option value="0">Male</option>
+                          <option value="1">Female</option>
                         </select>
                       </p>
-                      <p><input type="text" placeholder="Id Card"></p>
-                      <p><input type="text" placeholder="Phone Number"></p>
-                      <p><input type="text" placeholder="Email"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerGender').hasError('required')&& customerDto.get('customerGender').dirty  && submitted">
+                        Please select gender.
+                      </p>
+
+                      <p><input type="text" placeholder="Id Card" formControlName="customerIdCard"
+                                value="{{customer.customerIdCard}}"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerIdCard').hasError('required')&& customerDto.get('customerIdCard').dirty  && submitted">
+                        Customer id card must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Phone Number" formControlName="customerPhone"
+                                value="{{customer.customerPhone}}"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerPhone').hasError('required')&& customerDto.get('customerPhone').dirty  && submitted">
+                        Phone number must not blank.
+                      </p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerPhone').hasError('pattern')&& customerDto.get('customerPhone').dirty  && submitted">
+                        Phone number must match 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx.
+                      </p>
+
+                      <p><input type="text" placeholder="Email" formControlName="customerEmail"
+                                value="{{customer.customerEmail}}"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerEmail').hasError('required')&& customerDto.get('customerEmail').dirty  && submitted">
+                        Email Name must not blank.
+                      </p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerEmail').hasError('email')&& customerDto.get('customerEmail').dirty  && submitted">
+                        Email is not valid.
+                      </p>
+
                       <p>
-                        <select class="select-option-custom">
-                          <option selected>Customer Type</option>
-                          <option>Diamond</option>
-                          <option>Platinium</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
-                          <option>Member</option>
+                        <select class="select-option-custom" formControlName="customerType"
+                                value="{{customerType.customerTypeName}}">
+                          <option value="" selected disabled>Customer Type</option>
+                          <option value="Diamond">Diamond</option>
+                          <option value="Platinum">Platinum</option>
+                          <option value="Gold">Gold</option>
+                          <option value="Silver">Silver</option>
+                          <option value="Member">Member</option>
                         </select>
                       </p>
-                      <p><input type="text" placeholder="Address"></p>
-                      <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerType').hasError('required')&& customerDto.get('customerType').dirty  && submitted">
+                        Please select customer type.
+                      </p>
+
+                      <p><input type="text" placeholder="Address" formControlName="address"
+                                value="{{customer.address}}"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('address').hasError('required')&& customerDto.get('address').dirty  && submitted">
+                        Address must not blank.
+                      </p>
+
                       <button type="submit" class="btn btn-success">Update</button>
                     </form>
                   </div>

@@ -15,11 +15,19 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
+
+          <input type="text" [(ngModel)]="searchName" placeholder="Customer name" name="searchName">
+          <input type="text" [(ngModel)]="searchPhone" placeholder="Phone number" name="searchPhone">
+          <input type="text" [(ngModel)]="searchAddress" placeholder="Address" name="searchAddress">
+          <button type="submit" (click)="searchCustomer()">Search</button>
+
         <div class="table-wrap">
+          <div style="color: green">{{message}}</div>
           <table class="table table-striped">
             <thead>
             <tr>
               <th>No</th>
+              <th>Id</th>
               <th>Customer Name</th>
               <th>Birthday</th>
               <th>Gender</th>
@@ -31,22 +39,21 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let customerObj of customerList, index as i">
+            <tr *ngFor="let customerObj of customerList | paginate: { itemsPerPage: 6, currentPage: p }, index as i">
               <th scope="row">{{i + 1}}</th>
+              <td>{{customerObj.id}}</td>
               <td>{{customerObj.customerName}}</td>
               <td>{{customerObj.customerBirthday}}</td>
-              <td *ngIf="customerObj.customerGender == '1'">Male</td>
-              <td *ngIf="customerObj.customerGender == '0'">Female</td>
+              <td *ngIf="customerObj.customerGender == '0'">Male</td>
+              <td *ngIf="customerObj.customerGender == '1'">Female</td>
               <td>{{customerObj.customerIdCard}}</td>
               <td>{{customerObj.customerPhone}}</td>
               <td>{{customerObj.customerType.customerTypeName}}</td>
               <td>{{customerObj.address}}</td>
               <td>
-                <a href="#" class="btn btn-warning">Edit</a>
-                <button (click)="showModalDelete(customerObj, i)"
-                        type="button" class="btn btn-danger" id="btnModalDelete" data-toggle="modal"
-                        data-target="#exampleModal">Delete
-                </button>
+                <a [routerLink]="['/customer/edit/'+customerObj.id]" class="btn btn-warning">Edit</a>
+                <a (click)="shoModal(customerObj.id)" class="btn btn-danger"
+                    id="btnModalDelete" data-toggle="modal" data-target="#exampleModal">Delete</a>
               </td>
             </tr>
             </tbody>
@@ -56,15 +63,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-end">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
-        </nav>
+          <pagination-controls (pageChange)="p = $event" class="float-md-right"></pagination-controls>
       </div>
     </div>
 
@@ -92,7 +91,7 @@
             <button type="button" class=" btn btn-success" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">Cancel</span>
             </button>
-            <button (click)="deleteCustomer(index)" type="button" class=" btn btn-danger" data-dismiss="modal"
+            <button (click)="deleteCustomer(cusId)" type="button" class=" btn btn-danger" data-dismiss="modal"
                     aria-label="Close">
               <span aria-hidden="true">Delete</span>
             </button>

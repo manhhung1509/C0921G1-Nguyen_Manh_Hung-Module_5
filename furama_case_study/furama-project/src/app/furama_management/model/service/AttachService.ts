@@ -1,5 +1,5 @@
 export interface AttachService {
-  attachServiceId?: number;
+  id?: number;
   attachServiceName?: string;
   attachServiceCost?: number;
 

@@ -1,4 +1,4 @@
 export interface ServiceType {
-  serviceTypeId: number;
+  id: number;
   serviceTypeName: string;
 }

@@ -1,0 +1,130 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "iphone 13",
+      "price": 500,
+      "description": "like new 99%",
+      "category": {
+        "id": 1,
+        "name": "iphone"
+      }
+    },
+    {
+      "id": 2,
+      "name": "iphone X",
+      "price": 400,
+      "description": "like new 97%",
+      "category": {
+        "id": 1,
+        "name": "iphone"
+      }
+    },
+    {
+      "name": "t",
+      "price": 3,
+      "description": "e",
+      "category": {
+        "id": "1"
+      },
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 2,
+      "name": "samsung"
+    },
+    {
+      "name": "iphone",
+      "id": 3
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "content": "ssss",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "content": "vvadas",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "content": "ASDASD",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "content": "bvbv",
+      "complete": false
+    },
+    {
+      "id": 6,
+      "content": "dasdad",
+      "complete": false
+    },
+    {
+      "id": 7,
+      "content": "sdasdxczc",
+      "complete": false
+    },
+    {
+      "id": 8,
+      "content": "xxxs",
+      "complete": false
+    },
+    {
+      "id": 9,
+      "content": "sss",
+      "complete": false
+    },
+    {
+      "id": 10,
+      "content": "xxx",
+      "complete": false
+    },
+    {
+      "id": 11,
+      "content": "ddd",
+      "complete": false
+    },
+    {
+      "id": 12,
+      "content": "bbb",
+      "complete": false
+    },
+    {
+      "id": 13,
+      "content": "cccx",
+      "complete": false
+    },
+    {
+      "id": 14,
+      "content": "das",
+      "complete": false
+    },
+    {
+      "id": 15,
+      "content": "asdd",
+      "complete": false
+    },
+    {
+      "id": 16,
+      "content": "sadc",
+      "complete": false
+    },
+    {
+      "id": 17,
+      "content": "sadasdqw",
+      "complete": false
+    },
+    {
+      "id": 18,
+      "content": "czxczx",
+      "complete": false
+    }
+  ]
+}

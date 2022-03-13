@@ -32,72 +32,86 @@
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                   <div class="billing-address-form">
-                    <form [formGroup]="customerDto">
+                    <form [formGroup]="customerDto" (ngSubmit)="createCustomer()">
 
                       <p><input type="text" placeholder="Customer code" formControlName="id"></p>
-                      <div *ngFor="let error of errorList">
-                        <p class="text-danger" *ngIf="error === 'IdRequiredError'">
-                          Customer id must not blank.
-                        </p>
-                        <p class="text-danger" *ngIf="error === 'IdPatternError'">
-                          Customer id must match KH-XXXX (X is a number from 0 to 9).
-                        </p>
-                      </div>
-
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('id').hasError('required') && submitted">
+                        Customer id must not blank.
+                      </p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('id').hasError('pattern') && submitted">
+                        Customer id must match format: KH-XXXX (X is a number from 0 to 9).
+                      </p>
 
                       <p><input type="text" placeholder="Customer Name" formControlName="customerName"></p>
                       <p class="text-danger"
-                         *ngIf="customerDto.get('customerName').hasError('required') && customerDto.get('customerName').dirty">
+                         *ngIf="customerDto.get('customerName').hasError('required') && submitted">
                         Customer Name must not blank.
                       </p>
 
-                      <p><input class="birthDay-custom" type="date" placeholder="Birthday"></p>
+                      <p><input class="birthDay-custom" type="date" placeholder="Birthday" formControlName="customerBirthday"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerBirthday').hasError('required') && submitted">
+                        Please select birthday.
+                      </p>
+
                       <p>
-                        <select class="select-option-custom">
+                        <select class="select-option-custom" formControlName="customerGender">
                           <option value="" selected disabled>Gender</option>
                           <option value="0">Male</option>
                           <option value="1">Female</option>
                         </select>
                       </p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerGender').hasError('required') && submitted">
+                        Please select gender.
+                      </p>
 
                       <p><input type="text" placeholder="Id Card" formControlName="customerIdCard"></p>
                       <p class="text-danger"
-                         *ngIf="customerDto.get('customerIdCard').hasError('required') && customerDto.get('customerIdCard').dirty">
+                         *ngIf="customerDto.get('customerIdCard').hasError('required') && submitted">
                         Customer id card must not blank.
                       </p>
 
                       <p><input type="text" placeholder="Phone Number" formControlName="customerPhone"></p>
                       <p class="text-danger"
-                         *ngIf="customerDto.get('customerPhone').hasError('required') && customerDto.get('customerPhone').dirty">
+                         *ngIf="customerDto.get('customerPhone').hasError('required') && submitted">
                         Phone number must not blank.
                       </p>
                       <p class="text-danger"
-                         *ngIf="customerDto.get('customerPhone').hasError('pattern') && customerDto.get('customerPhone').pristine">
+                         *ngIf="customerDto.get('customerPhone').hasError('pattern') && submitted">
                         Phone number must match 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx.
                       </p>
 
                       <p><input type="text" placeholder="Email" formControlName="customerEmail"></p>
                       <p class="text-danger"
-                         *ngIf="customerDto.get('customerEmail').hasError('required') && customerDto.get('customerEmail').dirty">
+                         *ngIf="customerDto.get('customerEmail').hasError('required') && submitted">
                         Email Name must not blank.
                       </p>
                       <p class="text-danger"
-                         *ngIf="customerDto.get('customerEmail').hasError('email') && customerDto.get('customerEmail').dirty">
+                         *ngIf="customerDto.get('customerEmail').hasError('email') && submitted">
                         Email is not valid.
                       </p>
 
                       <p>
-                        <select class="select-option-custom">
-                          <option selected>Customer Type</option>
-                          <option>Diamond</option>
-                          <option>Platinium</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
-                          <option>Member</option>
+                        <select class="select-option-custom" formControlName="customerType">
+                          <option value="" selected disabled>Customer Type</option>
+                          <option *ngFor="let customerType of customerTypeList" value="{{customerType.customerTypeName}}">{{customerType.customerTypeName}}</option>
                         </select>
                       </p>
-                      <p><input type="text" placeholder="Address"></p>
-                      <button type="submit" class="btn btn-success" (click)="getInfoForm()">Create</button>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('customerType').hasError('required') && submitted">
+                        Please select customer type.
+                      </p>
+
+                      <p><input type="text" placeholder="Address" formControlName="address"></p>
+                      <p class="text-danger"
+                         *ngIf="customerDto.get('address').hasError('required') && submitted">
+                        Address must not blank.
+                      </p>
+
+                      <button type="submit" class="btn btn-success">Create</button>
                     </form>
                   </div>
                 </div>

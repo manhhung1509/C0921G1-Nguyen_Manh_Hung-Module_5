@@ -1,69 +1,89 @@
 import {Customer} from '../../model/customer/Customer';
 import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class CustomerService {
-   customers: Customer[];
+  customer: Customer;
+  API_URL_LIST = 'http://localhost:3000/customerList';
 
-  public getCustomerList() {
-
-
-
-    this.customers = [
-      {
-        id:'KH-0001',
-        customerName: 'Nguyễn Văn Nghĩa',
-        customerBirthday: '2000-12-09',
-        customerGender: '1',
-        customerIdCard: '090879687965',
-        customerPhone: '0910980982',
-        customerEmail: 'nghia123@gmail.com',
-        customerType: {customerTypeId: 1,customerTypeName: 'Diamond'},
-        address: 'Thanh Hóa'
-      },
-      {
-        id:'KH-0002',
-        customerName: 'Nguyễn thị Hoa',
-        customerBirthday: '1997-09-19',
-        customerGender: '0',
-        customerIdCard: '09190890989',
-        customerPhone: '0911238902',
-        customerEmail: 'hoa123@gmail.com',
-        customerType: {customerTypeId: 3,customerTypeName: 'Gold'},
-        address: 'Quảng Bình'
-      },
-      {
-        id:'KH-0003',
-        customerName: 'Nguyễn Thị Hoài',
-        customerBirthday: '1998-03-03',
-        customerGender: '0',
-        customerIdCard: '091098298769',
-        customerPhone: '0911234336',
-        customerEmail: 'hoai123@gmail.com',
-        customerType: {customerTypeId: 2,customerTypeName: 'Platinum'},
-        address: 'Huế'
-      },
-      {
-        id:'KH-0004',
-        customerName: 'Nguyễn Văn Hậu',
-        customerBirthday: '1992-11-18',
-        customerGender: '1',
-        customerIdCard: '09028907909',
-        customerPhone: '0910987689',
-        customerEmail: 'hau123@gmail.com',
-        customerType: {customerTypeId: 4,customerTypeName: 'Silver'},
-        address: 'Đà Nẵng'
-      },
-    ];
-    return this.customers;
+  constructor(private httpClient: HttpClient) {
   }
 
-  public createCustomer(customer: Customer){
-    this.customers.push(customer);
-    // let customerNew : Customer;
-    // customerNew = { customerName: 'hung', id:5, customerGender:'1',customerPhone:'090890897',customerEmail:'hung@gmail.com',customerBirthday:'2000-09-09',address:'Qb',customerIdCard:'909090090',customerType:{customerTypeId:1,customerTypeName:'njdhs'}};
-    // this.customers.push(customerNew);
+  public getCustomerList(): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>(this.API_URL_LIST);
   }
 
+  public getCustomerTypeId(cTypeName: string): number {
+    let customerTypeIdd: number;
+    switch (cTypeName) {
+      case 'Diamond': {
+        customerTypeIdd = 1;
+        break;
+      }
+      case 'Platinum': {
+        customerTypeIdd = 2;
+        break;
+      }
+      case 'Gold': {
+        customerTypeIdd = 3;
+        break;
+      }
+      case 'Silver': {
+        customerTypeIdd = 4;
+        break;
+      }
+      case 'Member': {
+        customerTypeIdd = 5;
+        break;
+      }
+    }
+    return customerTypeIdd;
+  }
+
+  public createCustomer(c: Customer, cTypeName: string): Observable<void> {
+    let customerTypeIdd = this.getCustomerTypeId(cTypeName);
+    console.log(cTypeName);
+    console.log(customerTypeIdd);
+
+    this.customer = {
+      id: c.id,
+      customerName: c.customerName,
+      customerBirthday: c.customerBirthday,
+      customerGender: c.customerGender,
+      customerIdCard: c.customerIdCard,
+      customerPhone: c.customerPhone,
+      customerEmail: c.customerEmail,
+      customerType: {customerTypeId: customerTypeIdd, customerTypeName: cTypeName},
+      address: c.address
+    };
+    console.log(this.customer);
+    return this.httpClient.post<void>(this.API_URL_LIST, this.customer);
+  }
+
+  public findCustomerById(id: string): Observable<Customer> {
+    return this.httpClient.get<Customer>(this.API_URL_LIST + '/' + id);
+  }
+
+  public updateCustomer(c: Customer, cTypeName: string): Observable<void> {
+    let customerTypeIdd = this.getCustomerTypeId(cTypeName);
+    this.customer = {
+      id: c.id,
+      customerName: c.customerName,
+      customerBirthday: c.customerBirthday,
+      customerGender: c.customerGender,
+      customerIdCard: c.customerIdCard,
+      customerPhone: c.customerPhone,
+      customerEmail: c.customerEmail,
+      customerType: {customerTypeId: customerTypeIdd, customerTypeName: cTypeName},
+      address: c.address
+    };
+    return this.httpClient.put<void>(this.API_URL_LIST + '/' + c.id, this.customer);
+  }
+
+  public deleteCustomer(id: string): Observable<void> {
+    return this.httpClient.delete<void>(this.API_URL_LIST + '/' + id);
+  }
 
 }

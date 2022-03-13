@@ -9,7 +9,7 @@ export class ContractService {
 
     contractList = [
       {
-        contractCode: 'CT-0001',
+        id: 1,
         contractStartDate: '2020-10-12',
         contractEndDate: '2020-10-15',
         deposit: 1000,
@@ -27,8 +27,8 @@ export class ContractService {
           descriptionConvenient: 'Have pool',
           poolArea: 50,
           numberOfFloor: 2,
-          rentType: {rentTypeId: 1, rentTypeName: 'Year', rentTypeCost: 200},
-          serviceType: {serviceTypeId: 1, serviceTypeName: 'Villa'}
+          rentType: {id: 1, rentTypeName: 'Year', rentTypeCost: 200},
+          serviceType: {id: 1, serviceTypeName: 'Villa'}
         }
       }
     ];

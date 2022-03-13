@@ -31,31 +31,88 @@
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                   <div class="billing-address-form">
-                    <form action="#">
-                      <p><input type="text" placeholder="Customer Name"></p>
-                      <p><input class="birthDay-custom" type="date" placeholder="Birthday"></p>
+                    <form [formGroup]="serviceDto" (ngSubmit)="createService()">
+                      <p><input type="text" placeholder="Service id" formControlName="id"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('id').hasError('required') && submitted">
+                        Service id must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Service Name" formControlName="serviceName"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('serviceName').hasError('required') && submitted">
+                        Service name must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Service Area" formControlName="serviceArea"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('serviceArea').hasError('required') && submitted">
+                        Service area must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Max People" formControlName="maximumPeople"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('maximumPeople').hasError('required') && submitted">
+                        Max people must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Standard Room" formControlName="standardRoom"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('standardRoom').hasError('required') && submitted">
+                        Standard must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Description Convenient" formControlName="descriptionConvenient"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('descriptionConvenient').hasError('required') && submitted">
+                        Description convenient must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Pool Area" formControlName="poolArea"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('poolArea').hasError('required') && submitted">
+                        Pool area must not blank.
+                      </p>
+
+                      <p><input type="text" placeholder="Number Of Floor" formControlName="numberOfFloor"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('numberOfFloor').hasError('required') && submitted">
+                        Number of floor must not blank.
+                      </p>
+
+<!--                      <p>-->
+<!--                        <select class="select-option-custom" formControlName="attachService">-->
+<!--                          <option selected>Gender</option>-->
+<!--                          <option value="1">Male</option>-->
+<!--                        </select>-->
+<!--                      </p>-->
+<!--                      <p class="text-danger"-->
+<!--                         *ngIf="serviceDto.get('id').hasError('required') && submitted">-->
+<!--                        Customer id must not blank.-->
+<!--                      </p>-->
+
                       <p>
-                        <select class="select-option-custom">
-                          <option selected>Gender</option>
-                          <option value="1">Male</option>
-                          <option value="2">Female</option>
+                        <select class="select-option-custom" formControlName="rentType">
+                          <option value="" selected disabled>Rent Type</option>
+                          <option *ngFor="let rentType of rentTypeList" [ngValue]="rentType">{{rentType.rentTypeName}}</option>
                         </select>
                       </p>
-                      <p><input type="text" placeholder="Id Card"></p>
-                      <p><input type="text" placeholder="Phone Number"></p>
-                      <p><input type="text" placeholder="Email"></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('rentType').hasError('required') && submitted">
+                        Please choose rent type!
+                      </p>
+
                       <p>
-                        <select class="select-option-custom">
-                          <option selected>Customer Type</option>
-                          <option>Diamond</option>
-                          <option>Platinium</option>
-                          <option>Gold</option>
-                          <option>Silver</option>
-                          <option>Member</option>
+                        <select class="select-option-custom" formControlName="serviceType">
+                          <option value="" selected disabled>Service Type</option>
+                          <option *ngFor="let serviceType of serviceTypeList" [ngValue]="serviceType">{{serviceType.serviceTypeName}}</option>
                         </select>
                       </p>
-                      <p><input type="text" placeholder="Address"></p>
-                      <p><textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea></p>
+                      <p class="text-danger"
+                         *ngIf="serviceDto.get('serviceType').hasError('required') && submitted">
+                        Please choose service type!
+                      </p>
+
                       <button type="submit" class="btn btn-success">Create</button>
                     </form>
                   </div>

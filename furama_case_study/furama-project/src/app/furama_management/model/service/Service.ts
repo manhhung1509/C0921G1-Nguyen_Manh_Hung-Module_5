@@ -11,8 +11,8 @@ export interface Service {
   descriptionConvenient?:string;
   poolArea?:number;
   numberOfFloor?:number;
-  attachService?:AttachService;
-  rentType: RentType;
-  serviceType: ServiceType;
+  // attachService?:AttachService;
+  rentType?: RentType;
+  serviceType?: ServiceType;
 
 }

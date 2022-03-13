@@ -1,0 +1,708 @@
+{
+  "customerList": [
+    {
+      "id": "KH-0001",
+      "customerName": "Lê Thanh Nghị",
+      "customerBirthday": "1988-11-14",
+      "customerGender": "0",
+      "customerIdCard": "989789202010",
+      "customerPhone": "0907829202",
+      "customerEmail": "nghi123@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Hà Tĩnh"
+    },
+    {
+      "id": "KH-0002",
+      "customerName": "Trần Minh thu",
+      "customerBirthday": "1990-03-06",
+      "customerGender": "0",
+      "customerIdCard": "12132289872",
+      "customerPhone": "0910001118",
+      "customerEmail": "thucn892l@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "23 Smith "
+    },
+    {
+      "id": "KH-0003",
+      "customerName": "Nguyễn Tiến Hoài",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "090789898111",
+      "customerPhone": "0911112221",
+      "customerEmail": "hoaii123@gmail.com",
+      "customerType": {
+        "customerTypeId": 1,
+        "customerTypeName": "Diamond"
+      },
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": "KH-0004",
+      "customerName": "Trần Xuân Lượng",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "090898090432",
+      "customerPhone": "0913333331",
+      "customerEmail": "luong92d@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Huế"
+    },
+    {
+      "id": "KH-0005",
+      "customerName": "Nguyễn Văn An",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "098909879111",
+      "customerPhone": "0914444441",
+      "customerEmail": "anmd029@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Ninh Bình"
+    },
+    {
+      "id": "KH-0006",
+      "customerName": "Hoàng Thu Thảo",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "123783019047",
+      "customerPhone": "0915555551",
+      "customerEmail": "thaohhf3@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Tuyên Quang"
+    },
+    {
+      "id": "KH-0007",
+      "customerName": "Trần Cẩm Tú",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "019209473829",
+      "customerPhone": "0916666661",
+      "customerEmail": "tu0123@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Vũng Tàu"
+    },
+    {
+      "id": "KH-0008",
+      "customerName": "Lê thị Thùy Dung",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "090909898681",
+      "customerPhone": "0917777771",
+      "customerEmail": "dung92192@gmail.com",
+      "customerType": {
+        "customerTypeId": 1,
+        "customerTypeName": "Diamond"
+      },
+      "address": "Đồng Nai"
+    },
+    {
+      "id": "KH-0009",
+      "customerName": "Lê Hiền",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "090978943720",
+      "customerPhone": "0918888881",
+      "customerEmail": "hien82139@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Hà Nội"
+    },
+    {
+      "id": "KH-0010",
+      "customerName": "Hoàng Xuân Thành",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "111222888930",
+      "customerPhone": "0919999991",
+      "customerEmail": "thanh2389@gmail.com",
+      "customerType": {
+        "customerTypeId": 4,
+        "customerTypeName": "Silver"
+      },
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": "KH-0011",
+      "customerName": "Dương Văn Nhã",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "123123123897",
+      "customerPhone": "0910101011",
+      "customerEmail": "nha009@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Thanh Hóa"
+    },
+    {
+      "id": "KH-0012",
+      "customerName": "Đoàn Thùy Dung",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "234234234980",
+      "customerPhone": "0911212121",
+      "customerEmail": "dungi02@gmail.com",
+      "customerType": {
+        "customerTypeId": 1,
+        "customerTypeName": "Diamond"
+      },
+      "address": "Quảng Trị"
+    },
+    {
+      "id": "KH-0013",
+      "customerName": "Bùi Thanh Mai",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "12378686890",
+      "customerPhone": "0911313131",
+      "customerEmail": "mai922@gmail.com",
+      "customerType": {
+        "customerTypeId": 4,
+        "customerTypeName": "Silver"
+      },
+      "address": "Nghệ An"
+    },
+    {
+      "id": "KH-0014",
+      "customerName": "Nguyền Thị Thu Huyền",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "212354321905",
+      "customerPhone": "0900000001",
+      "customerEmail": "huyen120@gmail.com",
+      "customerType": {
+        "customerTypeId": 5,
+        "customerTypeName": "Member"
+      },
+      "address": "Ninh Bình"
+    },
+    {
+      "id": "KH-0015",
+      "customerName": "Lê Văn Thắng",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "321312300090",
+      "customerPhone": "0901112221",
+      "customerEmail": "thangkj22@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Lạng Sơn"
+    },
+    {
+      "id": "KH-0016",
+      "customerName": "Nguyễn Văn Tuấn",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "879202909890",
+      "customerPhone": "0903333331",
+      "customerEmail": "tuan92@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Thái Bình"
+    },
+    {
+      "id": "KH-0017",
+      "customerName": "Đoàn Viết Cường",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "321321987987",
+      "customerPhone": "0904444441",
+      "customerEmail": "cuong721@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Nghệ An"
+    },
+    {
+      "id": "KH-0018",
+      "customerName": "Trần thanh Tú",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "090909090909",
+      "customerPhone": "0905555551",
+      "customerEmail": "tus892@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Quảng Bình"
+    },
+    {
+      "id": "KH-0019",
+      "customerName": "Nguyễn Ánh Nguyệt",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "878787876786",
+      "customerPhone": "0900000007",
+      "customerEmail": "nguyetj78123@gmail.com",
+      "customerType": {
+        "customerTypeId": 5,
+        "customerTypeName": "Member"
+      },
+      "address": "Quảng Bình"
+    },
+    {
+      "id": "KH-0020",
+      "customerName": "Nguyễn Thu Trang",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "989876202022",
+      "customerPhone": "0908887778",
+      "customerEmail": "trang322@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "DakLak"
+    },
+    {
+      "id": "KH-0021",
+      "customerName": "Phan Minh",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "100000009091",
+      "customerPhone": "0915268902",
+      "customerEmail": "minh123@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Tp.HCM"
+    },
+    {
+      "id": "KH-0023",
+      "customerName": "Dương Thị Hồng Thắm",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "1",
+      "customerIdCard": "090878879213",
+      "customerPhone": "0905920193",
+      "customerEmail": "tham@gmail.com",
+      "customerType": {
+        "customerTypeId": 1,
+        "customerTypeName": "Diamond"
+      },
+      "address": "Hà Nội"
+    },
+    {
+      "id": "KH-0024",
+      "customerName": "Nguyễn Anh Tuấn",
+      "customerBirthday": "1990-03-10",
+      "customerGender": "0",
+      "customerIdCard": "989767656434",
+      "customerPhone": "0919992227",
+      "customerEmail": "tuan123@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": "KH-0025",
+      "customerName": "Nguyễn Như ý",
+      "customerBirthday": "2020-02-11",
+      "customerGender": "1",
+      "customerIdCard": "213213213123",
+      "customerPhone": "0901010230",
+      "customerEmail": "y21312@gmail.com",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "address": "Quảng trị"
+    },
+    {
+      "id": "KH-0034",
+      "customerName": "Tran Hai",
+      "customerBirthday": "2000-09-09",
+      "customerGender": "0",
+      "customerIdCard": "213123123",
+      "customerPhone": "0919839393",
+      "customerEmail": "hai@gmail.com",
+      "customerType": {
+        "customerTypeId": 3,
+        "customerTypeName": "Gold"
+      },
+      "address": "Thanh Hoa"
+    }
+  ],
+  "serviceList": [
+    {
+      "id": 1,
+      "serviceName": "Room1",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 3,
+        "serviceTypeName": "Room"
+      }
+    },
+    {
+      "id": 2,
+      "serviceName": "Villa1",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 1,
+        "serviceTypeName": "Villa"
+      }
+    },
+    {
+      "id": 3,
+      "serviceName": "House1",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 2,
+        "serviceTypeName": "House"
+      }
+    },
+    {
+      "id": 5,
+      "serviceName": "Room2",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 3,
+        "serviceTypeName": "Room"
+      }
+    },
+    {
+      "id": 6,
+      "serviceName": "House2",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 2,
+        "serviceTypeName": "House"
+      }
+    },
+    {
+      "id": 7,
+      "serviceName": "House2",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 2,
+        "serviceTypeName": "House"
+      }
+    },
+    {
+      "id": 8,
+      "serviceName": "Room3",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 3,
+        "serviceTypeName": "Room"
+      }
+    },
+    {
+      "id": 9,
+      "serviceName": "House3",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 2,
+        "serviceTypeName": "House"
+      }
+    },
+    {
+      "id": 11,
+      "serviceName": "Villa2",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 1,
+        "serviceTypeName": "Villa"
+      }
+    },
+    {
+      "id": 12,
+      "serviceName": "Villa3",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 1,
+        "serviceTypeName": "Villa"
+      }
+    },
+    {
+      "id": 13,
+      "serviceName": "Room5",
+      "serviceArea": 150,
+      "maximumPeople": 2,
+      "standardRoom": "premium",
+      "descriptionConvenient": "Free bike",
+      "poolArea": 70,
+      "numberOfFloor": 2,
+      "rentType": {
+        "rentTypeId": 3,
+        "rentTypeName": "Day",
+        "rentTypeCost": 300
+      },
+      "serviceType": {
+        "serviceTypeId": 3,
+        "serviceTypeName": "Room"
+      }
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": "213",
+      "serviceName": "ads",
+      "serviceArea": "12",
+      "maximumPeople": "sad",
+      "standardRoom": "21",
+      "descriptionConvenient": "21",
+      "poolArea": "21",
+      "numberOfFloor": "333",
+      "rentType": {
+        "id": 3,
+        "rentTypeCost": 500000,
+        "rentTypeName": "Day"
+      },
+      "serviceType": {
+        "id": 2,
+        "serviceTypeName": "House"
+      }
+    },
+    {
+      "id": "888",
+      "serviceName": "12",
+      "serviceArea": "12",
+      "maximumPeople": "12",
+      "standardRoom": "12",
+      "descriptionConvenient": "12",
+      "poolArea": "12",
+      "numberOfFloor": "12",
+      "rentType": {
+        "id": 2,
+        "rentTypeCost": 400000,
+        "rentTypeName": "Month"
+      },
+      "serviceType": {
+        "id": 1,
+        "serviceTypeName": "Villa"
+      }
+    },
+    {
+      "id": "323",
+      "serviceName": "villlis",
+      "serviceArea": "21",
+      "maximumPeople": "21",
+      "standardRoom": "dsadsa",
+      "descriptionConvenient": "dfsds",
+      "poolArea": "21",
+      "numberOfFloor": "212",
+      "rentType": {
+        "id": 2,
+        "rentTypeCost": 400000,
+        "rentTypeName": "Month"
+      },
+      "serviceType": {
+        "id": 2,
+        "serviceTypeName": "House"
+      }
+    },
+    {
+      "id": "34",
+      "serviceName": "34",
+      "serviceArea": "34",
+      "maximumPeople": "34",
+      "standardRoom": "34",
+      "descriptionConvenient": "34",
+      "poolArea": "34",
+      "numberOfFloor": "34",
+      "rentType": {
+        "id": 2,
+        "rentTypeCost": 400000,
+        "rentTypeName": "Month"
+      },
+      "serviceType": {
+        "id": 2,
+        "serviceTypeName": "House"
+      }
+    }
+  ],
+  "customerTypeList": [
+    {
+      "customerTypeId": 1,
+      "customerTypeName": "Diamond"
+    },
+    {
+      "customerTypeId": 2,
+      "customerTypeName": "Platinum"
+    },
+    {
+      "customerTypeId": 3,
+      "customerTypeName": "Gold"
+    },
+    {
+      "customerTypeId": 4,
+      "customerTypeName": "Silver"
+    },
+    {
+      "customerTypeId": 5,
+      "customerTypeName": "Member"
+    }
+  ],
+  "rentTypeList": [
+    {
+      "id": 1,
+      "rentTypeCost": 300000,
+      "rentTypeName": "Hour"
+    },
+    {
+      "id": 2,
+      "rentTypeCost": 400000,
+      "rentTypeName": "Month"
+    },
+    {
+      "id": 3,
+      "rentTypeCost": 500000,
+      "rentTypeName": "Day"
+    },
+    {
+      "id": 4,
+      "rentTypeCost": 600000,
+      "rentTypeName": "Hour"
+    }
+  ],
+  "serviceTypeList": [
+    {
+      "id": 1,
+      "serviceTypeName": "Villa"
+    },
+    {
+      "id": 2,
+      "serviceTypeName": "House"
+    },
+    {
+      "id": 3,
+      "serviceTypeName": "Room"
+    }
+  ]
+}

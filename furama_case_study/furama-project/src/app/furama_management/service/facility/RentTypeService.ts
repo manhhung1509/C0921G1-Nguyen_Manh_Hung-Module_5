@@ -1,18 +1,17 @@
 import {RentType} from '../../model/service/RentType';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class RentTypeService {
 
-  public getRentTypeList() {
+  URL_API = "http://localhost:3000/rentTypeList"
 
-    let rentTypeList: RentType[];
+  constructor(private httpClient: HttpClient) {
+  }
 
-    rentTypeList = [
-      {rentTypeId: 1, rentTypeCost: 300000, rentTypeName: 'Hour'},
-      {rentTypeId: 2, rentTypeCost: 400000, rentTypeName: 'Month'},
-      {rentTypeId: 3, rentTypeCost: 500000, rentTypeName: 'Day'},
-      {rentTypeId: 4, rentTypeCost: 600000, rentTypeName: 'Hour'},
-    ];
-
-    return rentTypeList;
+  public getRentTypeList(): Observable<RentType[]> {
+    return this.httpClient.get<RentType[]>(this.URL_API);
   }
 }

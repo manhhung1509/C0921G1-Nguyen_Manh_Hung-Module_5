@@ -2,7 +2,7 @@ import {Customer} from '../customer/Customer';
 import {Service} from '../service/Service';
 
 export interface Contract {
-  contractCode: string;
+  id: number;
   contractStartDate: string;
   contractEndDate: string;
   deposit: number;
