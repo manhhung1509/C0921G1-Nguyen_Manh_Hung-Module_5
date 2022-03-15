@@ -4,6 +4,7 @@ import {Customer} from '../../../model/customer/Customer';
 import {CustomerService} from '../../../service/customer/CustomerService';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CustomerType} from '../../../model/customer/CustomerType';
+import {CustomerTypeService} from '../../../service/customer/CustomerTypeService';
 
 @Component({
   selector: 'app-update-customer',
@@ -14,14 +15,18 @@ export class UpdateCustomerComponent implements OnInit {
   customerDto: FormGroup;
   customer: Customer;
   customerType: CustomerType;
+  customerTypeList: CustomerType[];
   submitted = false;
+  message = false;
 
   constructor(private customerService: CustomerService,
+              private customerTypeService: CustomerTypeService,
               private activatedRoute: ActivatedRoute,
               private router: Router) {
   }
 
   ngOnInit(): void {
+    this.message = false;
     const customerId = this.activatedRoute.snapshot.params.id;
 
     this.customer = new class implements Customer {
@@ -41,25 +46,28 @@ export class UpdateCustomerComponent implements OnInit {
       customerTypeName: string;
     };
 
-    this.customerService.findCustomerById(customerId).subscribe(value => {
-      this.customer = value;
-      this.customerType.customerTypeId = this.customer.customerType.customerTypeId;
-      this.customerType.customerTypeName = this.customer.customerType.customerTypeName;
-    }, error => {
-      console.log('this is error update customer');
+    this.customerTypeService.getCustomerTypeList().subscribe(value => {
+      this.customerTypeList = value;
+      this.customerService.findCustomerById(customerId).subscribe(value => {
+        this.customer = value;
+        this.customerDto.setValue(this.customer);
+      }, error => {
+        console.log('this is error update customer');
+      });
     });
 
     this.customerDto = new FormGroup({
       id: new FormControl('', [Validators.required, Validators.pattern('^(KH-)[0-9]{4}$')]),
-      customerName: new FormControl('', Validators.required),
+      customerName: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$')]),
       customerEmail: new FormControl('', [Validators.required, Validators.email]),
       customerPhone: new FormControl('', [Validators.required, Validators.pattern('^(84+|0)(90|91)[0-9]{7}$')]),
-      customerIdCard: new FormControl('', Validators.required),
+      customerIdCard: new FormControl('', [Validators.required, Validators.pattern('^\\d{9,12}$')]),
       address: new FormControl('', Validators.required),
       customerType: new FormControl('', Validators.required),
       customerGender: new FormControl('', Validators.required),
       customerBirthday: new FormControl('', Validators.required)
     });
+
   }
 
   public showError() {
@@ -70,21 +78,20 @@ export class UpdateCustomerComponent implements OnInit {
 
   public updateCustomer() {
     // console.log('vao updateCustomer()');
+    console.log('vo update');
     if (this.customerDto.valid) {
-      this.customer = Object.assign({}, this.customerDto.value);
-      this.customerService.updateCustomer(this.customer, this.customerDto.value.customerType).subscribe(value => {
-        this.router.navigateByUrl('customers', {state: {message: 'Update customer successfully!'}});
+      console.log('vo update valid');
+      this.customer = this.customerDto.value;
+      console.log(this.customer);
+      this.customerService.updateCustomer(this.customer).subscribe(value => {
+        this.message = true;
+        // this.router.navigateByUrl('customers', {state: {message: 'Update customer successfully!'}});
       }, error => {
         console.log('this is error update customer.');
       });
     } else {
       this.showError();
+      console.log('vo update invalid');
     }
   }
-
-  public validateCustomer(a: AbstractControl): any{
-      let check = a.value;
-      console.log('this is check value: '+check)
-      return check !== '' ? null : {checkCName: true};
-    }
 }

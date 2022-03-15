@@ -3,30 +3,16 @@
     {
       "id": "KH-0001",
       "customerName": "Lê Thanh Nghị",
-      "customerBirthday": "1988-11-14",
-      "customerGender": "0",
-      "customerIdCard": "989789202010",
-      "customerPhone": "0907829202",
       "customerEmail": "nghi123@gmail.com",
+      "customerPhone": "0907829202",
+      "customerIdCard": "989789202010",
+      "address": "Hà Nam",
       "customerType": {
-        "customerTypeId": 3,
-        "customerTypeName": "Gold"
+        "customerTypeId": 4,
+        "customerTypeName": "Silver"
       },
-      "address": "Hà Tĩnh"
-    },
-    {
-      "id": "KH-0002",
-      "customerName": "Trần Minh thu",
-      "customerBirthday": "1990-03-06",
       "customerGender": "0",
-      "customerIdCard": "12132289872",
-      "customerPhone": "0910001118",
-      "customerEmail": "thucn892l@gmail.com",
-      "customerType": {
-        "customerTypeId": 2,
-        "customerTypeName": "Platinum"
-      },
-      "address": "23 Smith "
+      "customerBirthday": "1988-11-14"
     },
     {
       "id": "KH-0003",
@@ -71,20 +57,6 @@
       "address": "Ninh Bình"
     },
     {
-      "id": "KH-0006",
-      "customerName": "Hoàng Thu Thảo",
-      "customerBirthday": "1990-03-10",
-      "customerGender": "1",
-      "customerIdCard": "123783019047",
-      "customerPhone": "0915555551",
-      "customerEmail": "thaohhf3@gmail.com",
-      "customerType": {
-        "customerTypeId": 2,
-        "customerTypeName": "Platinum"
-      },
-      "address": "Tuyên Quang"
-    },
-    {
       "id": "KH-0007",
       "customerName": "Trần Cẩm Tú",
       "customerBirthday": "1990-03-10",
@@ -99,60 +71,18 @@
       "address": "Vũng Tàu"
     },
     {
-      "id": "KH-0008",
-      "customerName": "Lê thị Thùy Dung",
-      "customerBirthday": "1990-03-10",
-      "customerGender": "1",
-      "customerIdCard": "090909898681",
-      "customerPhone": "0917777771",
-      "customerEmail": "dung92192@gmail.com",
-      "customerType": {
-        "customerTypeId": 1,
-        "customerTypeName": "Diamond"
-      },
-      "address": "Đồng Nai"
-    },
-    {
-      "id": "KH-0009",
-      "customerName": "Lê Hiền",
-      "customerBirthday": "1990-03-10",
-      "customerGender": "1",
-      "customerIdCard": "090978943720",
-      "customerPhone": "0918888881",
-      "customerEmail": "hien82139@gmail.com",
-      "customerType": {
-        "customerTypeId": 3,
-        "customerTypeName": "Gold"
-      },
-      "address": "Hà Nội"
-    },
-    {
-      "id": "KH-0010",
-      "customerName": "Hoàng Xuân Thành",
-      "customerBirthday": "1990-03-10",
-      "customerGender": "0",
-      "customerIdCard": "111222888930",
-      "customerPhone": "0919999991",
-      "customerEmail": "thanh2389@gmail.com",
-      "customerType": {
-        "customerTypeId": 4,
-        "customerTypeName": "Silver"
-      },
-      "address": "Đà Nẵng"
-    },
-    {
       "id": "KH-0011",
       "customerName": "Dương Văn Nhã",
-      "customerBirthday": "1990-03-10",
-      "customerGender": "0",
-      "customerIdCard": "123123123897",
-      "customerPhone": "0910101011",
-      "customerEmail": "nha009@gmail.com",
+      "customerEmail": "nha00159@gmail.com",
+      "customerPhone": "0910101015",
+      "customerIdCard": "123123123895",
+      "address": "Quảng Bình",
       "customerType": {
-        "customerTypeId": 3,
-        "customerTypeName": "Gold"
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
       },
-      "address": "Thanh Hóa"
+      "customerGender": "1",
+      "customerBirthday": "1990-03-07"
     },
     {
       "id": "KH-0012",
@@ -199,16 +129,16 @@
     {
       "id": "KH-0015",
       "customerName": "Lê Văn Thắng",
-      "customerBirthday": "1990-03-10",
-      "customerGender": "0",
-      "customerIdCard": "321312300090",
-      "customerPhone": "0901112221",
       "customerEmail": "thangkj22@gmail.com",
+      "customerPhone": "0901112221",
+      "customerIdCard": "321312300090",
+      "address": "Bắc giang",
       "customerType": {
         "customerTypeId": 3,
         "customerTypeName": "Gold"
       },
-      "address": "Lạng Sơn"
+      "customerGender": "0",
+      "customerBirthday": "1990-03-10"
     },
     {
       "id": "KH-0016",
@@ -338,17 +268,87 @@
     },
     {
       "id": "KH-0034",
-      "customerName": "Tran Hai",
-      "customerBirthday": "2000-09-09",
-      "customerGender": "0",
-      "customerIdCard": "213123123",
-      "customerPhone": "0919839393",
-      "customerEmail": "hai@gmail.com",
+      "customerName": "ttttt",
+      "customerEmail": "ss@gmail.com",
+      "customerPhone": "0909283932",
+      "customerIdCard": "1231212",
+      "address": "Hà nội",
       "customerType": {
-        "customerTypeId": 3,
-        "customerTypeName": "Gold"
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
       },
-      "address": "Thanh Hoa"
+      "customerGender": "0",
+      "customerBirthday": "2022-04-05"
+    },
+    {
+      "id": "KH-0036",
+      "customerName": "ada",
+      "customerEmail": "ncm@Gmail.com",
+      "customerPhone": "0908282829",
+      "customerIdCard": "2123213123",
+      "address": "Hà Nội",
+      "customerType": {
+        "customerTypeId": 1,
+        "customerTypeName": "Diamond"
+      },
+      "customerGender": "0",
+      "customerBirthday": "2022-03-22"
+    },
+    {
+      "id": "KH-0044",
+      "customerName": "Nguyễn Hoàng Hải",
+      "customerEmail": "hai023@gmail.com",
+      "customerPhone": "0900008392",
+      "customerIdCard": "123213213",
+      "address": "Quảng Nam",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "customerGender": "0",
+      "customerBirthday": "2001-01-29"
+    },
+    {
+      "id": "KH-0056",
+      "customerName": "Nguyễn Thành Nhân",
+      "customerEmail": "nhan02230159@gmail.com",
+      "customerPhone": "0910008393",
+      "customerIdCard": "132132323333",
+      "address": "balaa",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "customerGender": "0",
+      "customerBirthday": "1999-03-16"
+    },
+    {
+      "id": "KH-0058",
+      "customerName": "Nguyễn Thúy Ngân",
+      "customerEmail": "ngan8127@gmail.com",
+      "customerPhone": "0906789678",
+      "customerIdCard": "192381293222",
+      "address": "Quảng Nam",
+      "customerType": {
+        "customerTypeId": 2,
+        "customerTypeName": "Platinum"
+      },
+      "customerGender": "1",
+      "customerBirthday": "2001-10-15"
+    },
+    {
+      "id": "KH-0078",
+      "customerName": "Phạm Trường Thành",
+      "customerEmail": "thanh2928@gmail.com",
+      "customerPhone": "0908920300",
+      "customerIdCard": "989876202022",
+      "address": "Hà Nội",
+      "customerType": {
+        "customerTypeId": 4,
+        "customerTypeName": "Silver"
+      },
+      "customerGender": "0",
+      "customerBirthday": "2000-05-10"
     }
   ],
   "serviceList": [

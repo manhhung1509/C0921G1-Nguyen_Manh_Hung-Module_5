@@ -24,6 +24,8 @@ import {CustomerTypeService} from './furama_management/service/customer/Customer
 import {ServiceService} from './furama_management/service/facility/ServiceService';
 import {ServiceTypeService} from './furama_management/service/facility/ServiceTypeService';
 import {RentTypeService} from './furama_management/service/facility/RentTypeService';
+import {ValidateCustomerService} from './furama_management/service/validate/validate_customer/validate-customer.service';
+import {ValidateServiceService} from './furama_management/service/validate/validate_service/validate-service.service';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import {RentTypeService} from './furama_management/service/facility/RentTypeServ
     ServiceService,
     ServiceTypeService,
     RentTypeService,
+    ValidateCustomerService,
+    ValidateServiceService,
     HttpClientModule
   ],
   bootstrap: [AppComponent]

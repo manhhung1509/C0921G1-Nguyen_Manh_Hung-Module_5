@@ -18,7 +18,7 @@ export class TodoService {
   getAll(): Observable<Todo[]> {
     return this.http.get<Todo[]>(API_URL + '/todos');
   }
-  
+
   deleteTodo(id: number): Observable<Todo> {
     return this.http.delete<Todo>(`${API_URL}/todos/${id}`);
   }
